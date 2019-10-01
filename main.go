@@ -84,9 +84,7 @@ func fillComments(tree *Tree, ct *CommentsTree, wg *sync.WaitGroup) {
 }
 
 func slowLoadingComment(id int, ct *CommentsTree, wg *sync.WaitGroup) {
-	ct = &CommentsTree {
-		Id: id,
-		Comment: fmt.Sprintf("Comment №: %d", id),
-	}
+	ct.Id = id
+	ct.Comment = fmt.Sprintf("Comment №: %d", id)
 	wg.Done()
 }
