@@ -54,7 +54,7 @@ func main() {
 		},
 	}
 	comments := makeComments(tree)
-	bytes, _ := json.Marshal(comments)
+	bytes, _ := json.MarshalIndent(comments, "", " ")
 
 	fmt.Print(string(bytes))
 }
